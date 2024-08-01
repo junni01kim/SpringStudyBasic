@@ -7,6 +7,9 @@ import java.text.MessageFormat;
 import java.util.ArrayList;
 import java.util.UUID;
 
+/**
+ * 프로젝트의 코드 테스트를 진행하기 위한 클래스
+ */
 public class OrderTester {
     public static void main(String[] args) {
         var customerId = UUID.randomUUID();
