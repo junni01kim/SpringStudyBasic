@@ -1,4 +1,4 @@
-package com.kmj.springapplication;
+package com.kmj.springapplication.order;
 
 /**
  * 주문 상태를 표시하기 위한 클래스

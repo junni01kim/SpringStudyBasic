@@ -1,5 +1,7 @@
 package com.kmj.springapplication;
 
+import com.kmj.springapplication.order.Order;
+import com.kmj.springapplication.voucher.Voucher;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
@@ -15,7 +17,9 @@ import java.util.UUID;
  * A. getBean(text)는 text라는 이름의 클래스를 자동으로 IoC해서 가져오는 것
  */
 @Configuration
-@ComponentScan //패키지 기준으로 Service
+//패키지 기준으로 Service, Repository 탐색// 어노테이션을 탐색할 패키지 위치를 지정
+@ComponentScan(basePackages = {"com.kmj.springapplication.order", "com.kmj.springapplication.voucher"})
+//@ComponentScan(basePackageClasses = {Order.class, Voucher.class})
 public class AppConfiguration {
     /**
      * Repository Annotation을 닮으로써 없어도 자동으로 Bean이 등록되어 진다.

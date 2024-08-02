@@ -1,5 +1,6 @@
-package com.kmj.springapplication;
+package com.kmj.springapplication.order;
 
+import com.kmj.springapplication.voucher.VoucherService;
 import org.springframework.stereotype.Service;
 
 import java.util.List;

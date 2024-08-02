@@ -20,3 +20,7 @@ create / list 커맨드를 지원한다.
 create 커맨드를 통해 바우처를 생성할수 있다. (FixedAmountVoucher, PercentDiscountVoucher)
 
 list 커맨드를 통해 만들어진 바우처를 조회할 수 있다.
+<br><br>
+### [미션 2] 바우처 관리 애플리케이션을 Command-line Application으로 제작한다.
+#### 과제는 다음과 같다.
+[미션1] 에서 메모리를 이용한 Repository가 아닌 파일을 이용한 관리를 제작한다.
