@@ -1,6 +1,4 @@
-package com.kmj.springapplication.order;
-
-import com.kmj.springapplication.voucher.Voucher;
+package com.kmj.springapplication;
 
 import java.util.List;
 import java.util.Optional;
@@ -13,14 +11,14 @@ import java.util.UUID;
  *
  */
 public class Order {
-    private final UUID orderid;
+    private final UUID orderId;
     private final UUID customerId;
     private final List<OrderItem> orderItems;
     private Optional<Voucher> voucher;
     private OrderStatus orderStatus = OrderStatus.ACCEPTED;
 
-    public Order(UUID orderid, UUID customerId, List<OrderItem> orderItems) {
-        this.orderid = orderid;
+    public Order(UUID orderId, UUID customerId, List<OrderItem> orderItems) {
+        this.orderId = orderId;
         this.customerId = customerId;
         this.orderItems = orderItems;
         this.voucher = Optional.empty();
@@ -28,13 +26,13 @@ public class Order {
 
     /**
      *
-     * @param orderid 주문을 특정하기 위한 아이디
+     * @param orderId 주문을 특정하기 위한 아이디
      * @param customerId 주문자를 특정하기 위한 아이디
      * @param orderItems 주문 상품의 집합
      * @param voucher 영수증(최종 금액)
      */
-    public Order(UUID orderid, UUID customerId, List<OrderItem> orderItems, Voucher voucher) {
-        this.orderid = orderid;
+    public Order(UUID orderId, UUID customerId, List<OrderItem> orderItems, Voucher voucher) {
+        this.orderId = orderId;
         this.customerId = customerId;
         this.orderItems = orderItems;
         this.voucher = Optional.of(voucher);
@@ -56,5 +54,9 @@ public class Order {
      */
     public void setOrderStatus(OrderStatus orderStatus) {
         this.orderStatus = orderStatus;
+    }
+
+    public UUID getOrderId() {
+        return orderId;
     }
 }

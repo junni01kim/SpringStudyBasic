@@ -1,6 +1,4 @@
-package com.kmj.springapplication.voucher;
-
-import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+package com.kmj.springapplication;
 
 import java.util.Scanner;
 
