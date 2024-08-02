@@ -1,5 +1,7 @@
 package com.kmj.springapplication;
 
+import com.kmj.springapplication.order.OrderItem;
+import com.kmj.springapplication.order.OrderService;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.util.Assert;
 

@@ -1,5 +1,11 @@
 package com.kmj.springapplication;
 
+import com.kmj.springapplication.order.Order;
+import com.kmj.springapplication.order.OrderRepository;
+import com.kmj.springapplication.order.OrderService;
+import com.kmj.springapplication.voucher.Voucher;
+import com.kmj.springapplication.voucher.VoucherRepository;
+import com.kmj.springapplication.voucher.VoucherService;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
@@ -35,7 +41,7 @@ public class AppConfiguration {
     }
 
     @Bean
-    public OrderService orderService(VoucherService voucherService,OrderRepository orderRepository) {
+    public OrderService orderService(VoucherService voucherService, OrderRepository orderRepository) {
         return new OrderService(voucherService,orderRepository);
     }
 }

@@ -1,4 +1,4 @@
-package com.kmj.springapplication;
+package com.kmj.springapplication.voucher;
 
 import java.text.MessageFormat;
 import java.util.UUID;

@@ -1,4 +1,6 @@
-package com.kmj.springapplication;
+package com.kmj.springapplication.order;
+
+import com.kmj.springapplication.voucher.VoucherService;
 
 import java.util.List;
 import java.util.UUID;

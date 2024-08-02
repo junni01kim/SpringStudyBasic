@@ -1,4 +1,4 @@
-package com.kmj.springapplication;
+package com.kmj.springapplication.order;
 
 import java.util.UUID;
 
