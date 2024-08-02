@@ -16,7 +16,7 @@ public class VoucherService {
         this.voucherRepository = voucherRepository;
     }
 
-    // 임시 생성자 <-- 생성자가 두개인 경우 어떤 것을 자동으로 주입할지 모르니 하나에 Autowired를 기술한다.
+    // 임시 생성자(강의에서 사용안함) <-- 생성자가 두개인 경우 어떤 것을 자동으로 주입할지 모르니 하나에 Autowired를 기술한다.
     public VoucherService(@Qualifier("memory") VoucherRepository voucherRepository, String temp) {
         this.voucherRepository = voucherRepository;
     }
