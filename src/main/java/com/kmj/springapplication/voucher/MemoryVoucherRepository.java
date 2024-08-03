@@ -43,6 +43,11 @@ public class MemoryVoucherRepository implements VoucherRepository, InitializingB
         return voucher;
     }
 
+    /**
+     * 미션1 진행을 위한 함수
+     *
+     * @return storage에 존재하는 모든 voucher
+     */
     public ArrayList<Voucher> getList(){
         var voucherList = new ArrayList<Voucher>();
         storage.forEach((voucherId, voucher)->{

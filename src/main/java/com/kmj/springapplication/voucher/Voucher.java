@@ -17,7 +17,9 @@ public interface Voucher {
     UUID getVoucherId();
 
     /**
+     * 미션 1의 진행을 위한 함수
      * value(amount||percent) getter
+     *
      * @return discountValue
      */
     long getValue();

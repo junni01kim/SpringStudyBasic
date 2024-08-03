@@ -28,6 +28,7 @@ public class PercentDiscountVoucher implements Voucher {
     }
 
     /**
+     * 미션1 진행을 위한 함수
      * percent getter
      *
      * @return percent
