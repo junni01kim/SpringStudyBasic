@@ -17,6 +17,12 @@ public interface Voucher {
     UUID getVoucherId();
 
     /**
+     * value(amount||percent) getter
+     * @return discountValue
+     */
+    long getValue();
+
+    /**
      * 최종금액을 계산하기 위한 함수
      *
      * @param beforeDiscount 할인가가 적용되지 않은 금액

@@ -28,6 +28,14 @@ public class PercentDiscountVoucher implements Voucher {
     }
 
     /**
+     * percent getter
+     *
+     * @return percent
+     */
+    @Override
+    public long getValue() { return percent; }
+
+    /**
      * 최종금액을 계산하기 위한 함수
      * 기존 가격을 퍼센트로 감가한다.
      *

@@ -28,6 +28,15 @@ public class FixedAmountVoucher implements Voucher {
     }
 
     /**
+     * amount getter
+     *
+     * @return amount
+     */
+    @Override
+    public long getValue() { return amount; }
+
+
+    /**
      * 최종금액을 계산하기 위한 함수
      * 기존 가격을 고점 금액으로 감가한다.
      *

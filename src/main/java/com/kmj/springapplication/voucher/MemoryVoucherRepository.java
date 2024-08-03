@@ -5,15 +5,9 @@ import jakarta.annotation.PreDestroy;
 import org.springframework.beans.factory.DisposableBean;
 import org.springframework.beans.factory.InitializingBean;
 import org.springframework.beans.factory.annotation.Qualifier;
-import org.springframework.beans.factory.config.ConfigurableBeanFactory;
-import org.springframework.context.annotation.Configuration;
-import org.springframework.context.annotation.Primary;
-import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Repository;
 
-import java.util.Map;
-import java.util.Optional;
-import java.util.UUID;
+import java.util.*;
 import java.util.concurrent.ConcurrentHashMap;
 
 /**
@@ -47,6 +41,14 @@ public class MemoryVoucherRepository implements VoucherRepository, InitializingB
     public Voucher insert(Voucher voucher) {
         storage.put(voucher.getVoucherId(), voucher);
         return voucher;
+    }
+
+    public ArrayList<Voucher> getList(){
+        var voucherList = new ArrayList<Voucher>();
+        storage.forEach((voucherId, voucher)->{
+            voucherList.add(voucher);
+        });
+        return voucherList;
     }
 
     /**
