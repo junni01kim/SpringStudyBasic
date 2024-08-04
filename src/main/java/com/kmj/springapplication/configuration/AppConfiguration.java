@@ -1,13 +1,9 @@
-package com.kmj.springapplication;
+package com.kmj.springapplication.configuration;
 
-import com.kmj.springapplication.order.Order;
-import com.kmj.springapplication.voucher.Voucher;
-import org.springframework.context.annotation.Bean;
+import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
-
-import java.util.Optional;
-import java.util.UUID;
+import org.springframework.context.annotation.PropertySource;
 
 /**
  * 각 서비스 레포지토리 생성에 대한 책임을 갖는다.
@@ -20,6 +16,8 @@ import java.util.UUID;
 //패키지 기준으로 Service, Repository 탐색// 어노테이션을 탐색할 패키지 위치를 지정
 @ComponentScan(basePackages = {"com.kmj.springapplication.order", "com.kmj.springapplication.voucher"})
 //@ComponentScan(basePackageClasses = {Order.class, Voucher.class})
+@PropertySource(value = "application.yaml", factory = YamlPropertiesFactory.class)
+@EnableConfigurationProperties
 public class AppConfiguration {
     /**
      * Repository Annotation을 닮으로써 없어도 자동으로 Bean이 등록되어 진다.

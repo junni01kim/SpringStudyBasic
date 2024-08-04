@@ -1,5 +1,6 @@
 package com.kmj.springapplication;
 
+import com.kmj.springapplication.configuration.AppConfiguration;
 import com.kmj.springapplication.order.OrderItem;
 import com.kmj.springapplication.order.OrderService;
 import com.kmj.springapplication.voucher.FixedAmountVoucher;
@@ -18,6 +19,13 @@ import java.util.UUID;
 public class OrderTester {
     public static void main(String[] args) {
         var applicationContext = new AnnotationConfigApplicationContext(AppConfiguration.class);
+
+        var environment = applicationContext.getEnvironment();
+        var property = environment.getProperty("kmj.version");
+        var minimumOrderAmount = environment.getProperty("kmj.minimun-order-amount", Integer.class);
+        var supportVendors = environment.getProperty("kmj.support-vendors", String.class);
+        var descriptions = environment.getProperty("kmj.descriptions", String.class);
+        System.out.println(MessageFormat.format("{0} {1} {2} {3}", property, minimumOrderAmount, supportVendors, descriptions));
 
         var customerId = UUID.randomUUID();
 
